@@ -1,0 +1,130 @@
+<configuration plugin="rotationmanagerbf3">
+    <settings name="commands">
+        <!-- This section defines the level required to use the commands
+              0 : guest
+              1 : user
+              2 : regular
+              20 : moderator
+              40 : admin
+              60 : fulladmin
+              80 : senioradmin
+              100 : superadmin
+          -->
+        <!-- Also, you can define command aliases by adding it after the command name, separating them with '-'.
+            For example if you want to use !ct instead of !changeteam, use the name "changeteam-ct" when
+            defining the command level below.
+          -->
+
+        <set name="tickets">20</set>
+		<set name="settickets">60</set>z
+		<set name="autotickets">20</set>
+		<set name="autorotation">20</set>
+		<set name="autoplayercount">20</set>
+
+    </settings>
+	<settings name="settings">
+		<!-- Map Rotation settings-->
+		<set name="auto_rotation_adjust">True</set>
+		<set name="map_rotations">4</set>
+		<set name="randomize">True</set>
+		<!--Server player settings-->
+		<set name="adjust_players">True</set>
+		<set name="max_players">64</set>
+		<set name="player_counts">0:8,12:16,20:24,28:32,40:48,44:64</set>
+		<!--Ticket counts-->
+		<set name="auto_tickets_adjust">True</set>
+		<set name="breakpoints">5</set>
+		<set name="ticket_configs">2</set>
+		<set name="max_tickets">80</set>
+		<!--Idle kick Settings-->
+		<set name="idle_kick_disable">True</set>
+		<set name="idle_player_count">10</set>
+	</settings>
+	<!--
+	 "ConquestLarge0": "Conquest64",
+    "ConquestSmall0": "Conquest",
+    "ConquestSmall1": "Conquest Assault",
+    "RushLarge0": "Rush",
+    "SquadRush0": "Squad Rush",
+    "SquadDeathMatch0": "Squad Deathmatch",
+    "TeamDeathMatch0": "Team Deathmatch"
+	-->
+	<!--
+    "Grand Bazaar": "MP_001",
+    "Teheran Highway": "MP_003",
+    "Caspian Border": "MP_007",
+    "Seine Crossing": "MP_011",
+    "Operation Firestorm": "MP_012",
+    "Damavand Peak": "MP_013",
+    "Noshahr Canals": "MP_017",
+    "Kharg Island": "MP_018",
+    "Operation Metro": "MP_Subway",
+    "Strike At Karkand": "XP1_001",
+    "Gulf of Oman": "XP1_002",
+    "Sharqi Peninsula": "XP1_003",
+    "Wake Island": "XP1_004",
+-->
+
+	<settings name="rot_1">
+		<set name="player_count">0</set>
+		<set name="map_count">2</set>
+		<set name="map1">Seine Crossing,ConquestSmall0,1</set>
+		<set name="map2">Operation Metro,ConquestSmall0,1</set>
+
+	</settings>
+		<settings name="rot_2">
+		<set name="player_count">12</set>
+		<set name="map_count">2</set>
+		<set name="map1">Seine Crossing,ConquestSmall0,1</set>
+		<set name="map2">Operation Metro,ConquestSmall0,1</set>
+
+	</settings>
+		<settings name="rot_3">
+		<set name="player_count">24</set>
+		<set name="map_count">2</set>
+		<set name="map1">Strike At Karkand,RushLarge0,2</set>
+		<set name="map2">Sharqi Peninsula,RushLarge0,2</set>
+
+	</settings>	
+	<settings name="rot_4">
+		<set name="player_count">48</set>
+		<set name="map_count">2</set>
+		<set name="map1">Operation Firestorm,RushLarge0,2</set>
+		<set name="map2">Kharg Island,RushLarge0,2</set>
+
+	</settings>
+	<settings name="gtmultipliers">
+		<set name="ConquestLarge0">1</set>
+		<set name="ConquestSmall0">1</set>
+		<set name="ConquestSmall1">1</set>
+		<set name="RushLarge0">1</set>
+		<set name="SquadRush0">2</set>
+		<set name="SquadDeathMatch0">1</set>
+		<set name="TeamDeathMatch0">1</set>
+	</settings>
+	<settings name="bp_1">
+		<set name="player_count">0</set>
+		<set name="ticket_multiplier_1">25</set>
+		<set name="ticket_multiplier_2">50</set>
+	</settings>
+	<settings name="bp_2">
+		<set name="player_count">10</set>
+		<set name="ticket_multiplier_1">50</set>
+		<set name="ticket_multiplier_2">75</set>
+	</settings>
+	<settings name="bp_3">
+		<set name="player_count">25</set>
+		<set name="ticket_multiplier_1">75</set>
+		<set name="ticket_multiplier_2">100</set>
+	</settings>
+	<settings name="bp_4">
+		<set name="player_count">40</set>
+		<set name="ticket_multiplier_1">100</set>
+		<set name="ticket_multiplier_2">100</set>
+	</settings>
+	<settings name="bp_5">
+		<set name="player_count">50</set>
+		<set name="ticket_multiplier_1">100</set>
+		<set name="ticket_multiplier_2">100</set>
+	</settings>
+</configuration>
