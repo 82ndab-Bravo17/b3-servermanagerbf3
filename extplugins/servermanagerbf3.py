@@ -435,6 +435,9 @@ class Servermanagerbf3Plugin(Plugin):
             self.debug('Next rotation rot_%s' % cur_rot)
             if self._current_rotation_no != cur_rot:
                 self.make_rotation(cur_rot)
+        else:
+            #restore default rotation
+            self.console.write(('mapList.load',))
     
         if self._autotickets:
             cur_bp = 1
@@ -585,6 +588,12 @@ class Servermanagerbf3Plugin(Plugin):
     def _start_delay(self):
         self._delay_player_check = False
         self.console.say('Player count adjuster now active')
+        if self._adjust_players_settings:
+            new_players_setting = self.get_new_players_setting()
+            if new_players_setting != self._current_players_setting:
+                self.set_players_setting(new_players_setting)
+                
+        self._check_players()
         
     def get_gt_multiplier(self):
         round_no, rounds_total = self.getRoundinfo()
