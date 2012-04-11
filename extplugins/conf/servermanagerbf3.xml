@@ -19,6 +19,7 @@
 		<set name="settickets">60</set>z
 		<set name="autotickets">20</set>
 		<set name="autorotation">20</set>
+		<set name="setrotation">40</set>
 		<set name="autoplayercount">20</set>
 
     </settings>
@@ -43,7 +44,9 @@
 	<!--
 	 "ConquestLarge0": "Conquest64",
     "ConquestSmall0": "Conquest",
-    "ConquestSmall1": "Conquest Assault",
+    "ConquestAssaultLarge0": "Conquest Assault64",
+    "ConquestAssaultSmall0": "Conquest Assault",
+    "ConquestAssaultSmall1": "Conquest Assault alt.2"
     "RushLarge0": "Rush",
     "SquadRush0": "Squad Rush",
     "SquadDeathMatch0": "Squad Deathmatch",

@@ -205,6 +205,23 @@ class Servermanagerbf3Plugin(Plugin):
             elif data.lower() == 'on':
                 self._autorotation = True
                 client.message('Auto rotation change is enabled')
+                
+    def cmd_setrotation(self, data, client, cmd=None):
+        """\
+        Set current rotation to Rotation number
+        """
+        if not data:
+            client.message("Need a rotaion number to set as current")
+            return
+            
+        if self._autorotation:
+            self._autorotation = False
+            client.message('Auto rotation change disabled')
+            
+        if int(data[0]) < 1 or int(data[0]) > self._breakpoints:
+            client.message("Rotation number out of range")
+            return
+        self.make_rotation(int(data[0]))
         
     def cmd_autoplayercount(self, data, client, cmd=None):
         """\
