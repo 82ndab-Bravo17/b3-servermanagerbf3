@@ -21,8 +21,9 @@
 # CHANGELOG
 #
 # 1.0.0   - Initial release
+# 1.1.1   - Added Close Quarters Maps etc.
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__  = '82ndab.Bravo17'
 
 import b3
@@ -49,6 +50,10 @@ BF3_MAP_NAMES = {
     "Gulf of Oman": "XP1_002",
     "Sharqi Peninsula": "XP1_003",
     "Wake Island": "XP1_004",
+    "Scrapmetal": "XP2_Factory",
+    "Operation 925": "XP2_Office",
+    "Donya Fortress": "XP2_Palace",
+    "Ziba Tower": "XP2_Skybar"
     }
 
 
@@ -229,7 +234,7 @@ class Servermanagerbf3Plugin(Plugin):
         """
         if not data:
             if self._adjust_players_settings:
-                client.message("Auto adjusy player count is currently on, use !autoplayercount off to turn off")
+                client.message("Auto adjust player count is currently on, use !autoplayercount off to turn off")
             else:
                 client.message("Auto adjust player count is currently off, use !autoplayercount on to turn on")
         else:
