@@ -51,6 +51,9 @@
     "SquadRush0": "Squad Rush",
     "SquadDeathMatch0": "Squad Deathmatch",
     "TeamDeathMatch0": "Team Deathmatch"
+    "Domination0": "Conquest Domination",
+    "GunMaster0": "Gun master",
+    "TeamDeathMatchC0": "TDM Close Quarters"
 	-->
 	<!--
     "Grand Bazaar": "MP_001",
@@ -66,6 +69,10 @@
     "Gulf of Oman": "XP1_002",
     "Sharqi Peninsula": "XP1_003",
     "Wake Island": "XP1_004",
+    "Scrapmetal": "XP2_Factory",
+    "Operation 925": "XP2_Office",
+    "Donya Fortress": "XP2_Palace",
+    "Ziba Tower": "XP2_Skybar"
 -->
 
 	<settings name="rot_1">
@@ -104,6 +111,9 @@
 		<set name="SquadRush0">2</set>
 		<set name="SquadDeathMatch0">1</set>
 		<set name="TeamDeathMatch0">1</set>
+		<set name="GunMaster0">1</set>
+		<set name="TeamDeathMatchC0">1</set>
+		<set name="Domination0">1</set>
 	</settings>
 	<settings name="bp_1">
 		<set name="player_count">0</set>
