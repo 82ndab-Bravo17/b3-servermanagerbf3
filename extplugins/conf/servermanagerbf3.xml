@@ -1,4 +1,4 @@
-<configuration plugin="rotationmanagerbf3">
+<configuration plugin="servermanagerbf3">
     <settings name="commands">
         <!-- This section defines the level required to use the commands
               0 : guest
@@ -107,6 +107,9 @@
 		<set name="ConquestLarge0">1</set>
 		<set name="ConquestSmall0">1</set>
 		<set name="ConquestSmall1">1</set>
+		<set name="ConquestAssaultLarge0">1</set>
+		<set name="ConquestAssaultSmall0">1</set>
+		<set name="ConquestAssaultSmall1">1</set>
 		<set name="RushLarge0">1</set>
 		<set name="SquadRush0">2</set>
 		<set name="SquadDeathMatch0">1</set>
