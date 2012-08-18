@@ -554,6 +554,9 @@ class Servermanagerbf3Plugin(Plugin):
         self.console.write(('mapList.list',))
 
     def set_players_setting(self, num_players):
+        """\
+        Sets the total player number for the server
+        """
         
         try:
             self.console.write(('vars.maxPlayers', num_players),)
@@ -564,6 +567,9 @@ class Servermanagerbf3Plugin(Plugin):
             self.debug('Error setting max players %s' %  num_players)
                 
     def get_new_players_setting(self):
+        """\
+        Gets the new total player number for the server
+        """
         clients = self.console.clients.getList()
         _players = len(clients)
         
@@ -585,6 +591,9 @@ class Servermanagerbf3Plugin(Plugin):
             return self._max_players
         
     def show_current_settings(self):
+        """\
+        Shows the current map and gametype
+        """
         if self._current_rotation_no != 0:
             self.console.say('Map Rotation set to Rotation %s' % self._current_rotation_no)
         else:
@@ -594,6 +603,9 @@ class Servermanagerbf3Plugin(Plugin):
             self.console.say('Current gametype is %s on %s and tickets at %s%%' % (self._next_gametype, self._easy_map_names[self._next_map_name], self._use_mult))
             
     def check_map_info(self, map_info):
+        """\
+        Checks that Maps can be used with gametypes
+        """
         map_details = map_info.split(',')
         if not map_details[1] in GAME_MODES_NAMES:
             self.error('There is an error with your Rotation Manager Plugin config in %s' % map_info)
@@ -608,6 +620,9 @@ class Servermanagerbf3Plugin(Plugin):
         return True
            
     def _start_delay(self):
+        """\
+        Delays the initial player count settings to allow for all current players to be found
+        """
         self._delay_player_check = False
         self.console.say('Player count adjuster now active')
         if self._adjust_players_settings:
@@ -618,6 +633,9 @@ class Servermanagerbf3Plugin(Plugin):
         self._check_players()
         
     def get_gt_multiplier(self):
+        """\
+        Returns the ticket multiplier for the gametype
+        """
         round_no, rounds_total = self.getRoundinfo()
         if rounds_total - round_no > 1:
             c = self.console.game
@@ -633,6 +651,9 @@ class Servermanagerbf3Plugin(Plugin):
         
         
     def setticketcount(self, tickets):
+        """\
+        Sets the ticket count
+        """
         try:
             self.console.write(('vars.gameModeCounter', tickets))
             self.debug('Tickets set to %s' % tickets)
@@ -642,6 +663,9 @@ class Servermanagerbf3Plugin(Plugin):
             return false
             
     def getRoundinfo(self):
+        """\
+        Returns the current round no and total rounds for the current map
+        """
         rounds = self.console.write(('mapList.getRounds', ))
         round_no = int(rounds[0])
         rounds_total = int(rounds[1])
